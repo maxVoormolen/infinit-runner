@@ -18,9 +18,9 @@ public class Background : MonoBehaviour {
     {
         background.transform.position -= new Vector3(5f * Time.deltaTime, 0f, 0f);
 
-        if (background.transform.position.x <= -20 && !isInstanciated)
+        if (background.transform.position.x <= -10 && !isInstanciated)
         {
-            Instantiate(background, new Vector3(background.transform.position.x + 96f, 0f, 0f), Quaternion.identity);
+            Instantiate(background, new Vector3(background.transform.position.x + 90f, 0f, 5f), Quaternion.identity);
             isInstanciated = true;
         }
 
