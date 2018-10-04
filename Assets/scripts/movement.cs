@@ -24,6 +24,13 @@ public class movement : MonoBehaviour {
         }
 
     }
+
+    public bool GetGrounded(){
+        return isGrounded;
+    }
+    public void SetGrounded(bool toggle){
+        isGrounded = toggle;
+    }
    
 
     void OnCollisionEnter2D(Collision2D collision) 
