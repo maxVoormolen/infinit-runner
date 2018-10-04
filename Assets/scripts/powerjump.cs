@@ -4,21 +4,33 @@ using UnityEngine;
 
 public class powerjump : MonoBehaviour {
 	public movement PlayerMovment;
-
-	public bool isInfJumpActive = false;
+	public powerupmaneger PUM;
+	
 	
 	// Use this for initialization
 	void Start () {
 		//GameObject g = GameObject.FindGameObjectWithTag (Playr);
 		GameObject player = GameObject.Find("player");
+		GameObject PUObject = GameObject.Find("PUManeger");
+
 		PlayerMovment = player.GetComponent<movement> ();
+		//PUM = player.GetComponent<powerupmaneger> ();
+
 		
 	}
+
 	
 	// Update is called once per frame
 	void Update () {
-		if (isInfJumpActive == true){
-			PlayerMovment.SetGrounded(true);
-		}
+	
+		
+
 	}
+	void OnTriggerEnter2D(Collider2D col)
+    {
+		PUM.PU1Power();
+       PUM.setInfJumpActive(true);
+		Destroy (this.gameObject);
+    }
+
 }
