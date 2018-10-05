@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class powerjump : MonoBehaviour {
-	public movement PlayerMovment;
+public class PowerJump : MonoBehaviour {
+	public Movement PlayerMovment;
 	public powerupmaneger PUM;
 	
 	
@@ -13,7 +13,7 @@ public class powerjump : MonoBehaviour {
 		GameObject player = GameObject.Find("player");
 		GameObject PUObject = GameObject.Find("PUManeger");
 
-		PlayerMovment = player.GetComponent<movement> ();
+		PlayerMovment = player.GetComponent<Movement> ();
 		//PUM = player.GetComponent<powerupmaneger> ();
 
 		

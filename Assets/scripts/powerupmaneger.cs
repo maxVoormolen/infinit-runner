@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class powerupmaneger : MonoBehaviour {
-	public movement PlayerMovment;
-	public powerjump powerjump;
+	public Movement PlayerMovment;
+	public PowerJump powerjump;
 
 	public bool isInfJumpActive = false;
 	public float PU1Timer = 10;

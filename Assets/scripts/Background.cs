@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Background : MonoBehaviour {
 
     public GameObject background;
+
+    public List<GameObject> levelChunks; 
+
     private bool isInstanciated = false;
 
     private void Start()
@@ -20,7 +23,10 @@ public class Background : MonoBehaviour {
 
         if (background.transform.position.x <= -10 && !isInstanciated)
         {
-            Instantiate(background, new Vector3(background.transform.position.x + 90f, 0f, 5f), Quaternion.identity);
+            int chunk = Random.RandomRange(0, levelChunks.Count);
+
+
+            Instantiate(levelChunks[chunk], new Vector3(background.transform.position.x + 90f, 0f, 0f), Quaternion.identity);
             isInstanciated = true;
         }
 
